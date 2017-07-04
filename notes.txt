@@ -1,0 +1,44 @@
+https://github.com/nesbox/tic.computer/wiki
+https://github.com/nesbox/tic.computer/wiki/RAM
+
+30x17 sprites of 8x8 -> 240x136
+
+TIC()
+scanline(y)
+
+cls(clr)
+print(txt,x,y) text [x=0 y=0] [color=15] [fixed=false] [scale=1] -> width
+
+font
+clip(x0,y0,w,h) // without args to unclip
+pix(x,y,clr)
+line(x0,y0,x1,y1,clr)
+rect(x0,y0,w,h,clr)   // filled
+rectb(x0,y0,w,h,clr)
+circ(x,y,r,clr)
+circb(x,y,r,clr)
+tri(x0,y0,x1,y1,x2,y2,clr)
+
+spr(n,x,y,?,s)  id x y [colorkey=-1] [scale=1] [flip=0] [rotate=0] [w=1 h=1]
+map [x=0 y=0] [w=30 h=17] [sx=0 sy=0] [colorkey=-1] [scale=1] [remap=nil]
+mget(x,y) id
+mset(x,y,id)
+
+btn(i) bool 0=-y 1=+y 2=-x 3=+x 4=a 5=b ... p2  (arrows,x<,y>) (rfdg,as) 
+btnp() id hold period
+mouse() [x,y,b]
+
+sfx
+music
+
+peek(addr) # byte val
+poke(addr,val)
+peek4 #half byte
+poke4
+memcpy
+memset
+pmem
+
+time() // millis since game started
+trace(msg,clr)
+sync
